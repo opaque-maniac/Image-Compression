@@ -1,42 +1,107 @@
-*{
-    margin: 0;
-    padding: 0;
+html {
+  box-sizing: border-box;
 }
 
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+/* For the body */
 body {
-    background-color: #313866;
-    display: flex;
-    justify-content: space-around;
-    align-content: space-around;
-    align-items: flex-start;
+  font-family: "Inter", sans-serif;
 }
 
+/* For the main container */
+#main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* For the page content container */
 #container {
-    margin-top: 50px;
-    width: 50%;
-    height: 100%;
-    display: grid;
-    justify-content: center;
-    text-align: center;
-    background-color: #50409A;
+  min-height: 200px;
+  max-height: 95vh;
+  min-width: 700px;
+  max-width: 90vw;
+  border: 1px solid #000;
+  border-radius: 10px;
+  background-color: #f5f5f5;
+  padding-bottom: 1rem;
 }
 
+/* For the main title */
+#main-title {
+  display: flex;
+  justify-content: center;
+  margin: 1rem auto;
+  font-size: 1.5rem;
+}
+#main-title a {
+  color: #3c4142;
+  text-decoration: none;
+}
+#main-title a:hover {
+  color: #000;
+  text-decoration: underline;
+}
+
+/* For the image holder */
 .imageholder {
-    overflow-y: scroll;
-    overflow-x: scroll;
-    width: 500px;
-    height: 500px;
+  width: 90%;
+  margin: auto;
+  height: calc(0.7 * 90vh);
+  border-top: 2px solid #000;
+  border-left: 2px solid #000;
+  border-radius: 10px;
+  padding: 1rem;
+  font-size: 1rem;
 }
 
+/* For the form */
 .form {
-    margin-top: 20px;
-    margin-bottom: 50px;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
 }
 
-button {
-    margin: 0;
-    border: 0;
-    padding: 5px;
-    background-color: #964ec2;
-    color: white;
+/* For the input */
+#imgId,
+#downloadImg {
+  display: inline-block;
+  font-size: 1.1rem;
+}
+
+/* For the button */
+#downloadImg {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #3c4142;
+  color: #fff;
+  cursor: pointer;
+}
+#downloadImg:hover {
+  background-color: #000;
+}
+
+/* Classes for toggling image preview */
+.hide {
+  height: 0;
+  display: none;
+  transition: height 0.5s ease-in-out;
+  transition: display 0.5s ease-in-out;
+}
+.show {
+  display: block;
+  height: calc(0.7 * 90vh);
+  transition: height 0.5s ease-in-out;
+  transition: display 0.5s ease-in-out;
 }
