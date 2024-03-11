@@ -96,12 +96,12 @@ body {
 .hide {
   height: 0;
   display: none;
-  transition: height 0.5s ease-in-out;
-  transition: display 0.5s ease-in-out;
+  transition: height 0.5s ease-in-out, display 0.5s ease-in-out,
+    width 0.5s ease-in-out;
 }
 .show {
   display: block;
   height: calc(0.7 * 90vh);
-  transition: height 0.5s ease-in-out;
-  transition: display 0.5s ease-in-out;
+  transition: height 0.5s ease-in-out, display 0.5s ease-in-out,
+    width 0.5s ease-in-out;
 }
